@@ -1,0 +1,21 @@
+body {
+  font-size: 16px;
+  color: #000;
+  font-family: 'Oxygen', sans-serif;
+}
+
+.menu-empty {
+  border: 2px solid #f00;
+  padding: 5px;
+}
+
+.menu-nonempty {
+  border: 2px solid #0a0;
+  padding: 5px;
+}
+
+.note {
+  color: #aaa;
+  font-style: italic;
+  font-size: 12px;
+}

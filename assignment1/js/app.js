@@ -24,12 +24,15 @@ function LunchCheckController($scope) {
     //Set the message according to the number of items in the menu
     if (count == 0) {
       $scope.message = "Your menu is empty.";
+      $scope.messageclass = "menu-empty";
     }
     else if (count < 4) {
       $scope.message = "Enjoy!";
+      $scope.messageclass = "menu-nonempty";
     }
     else {
       $scope.message = "Too much!"
+      $scope.messageclass = "menu-nonempty";
     }
   };
 }
