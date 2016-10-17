@@ -10,8 +10,9 @@
   function FoundItemsDirective() {
     var ddo = {
       templateUrl: 'itemList.html',
+      restrict: 'E',
       scope: {
-        found: '<',
+        matched: '<',
         showMsg: '<',
 //        myTitle: '@title',
         onRemove: '&'
@@ -36,11 +37,13 @@
     ctrl.showMsg = false;
 
     ctrl.getMatchedMenuItems = function(searchTerm) {
+      if (typeof(searchTerm) === "string" && searchTerm.trim() === "") {
+        ctrl.showMsg = true;
+        return (ctrl.found = []);
+      }
       var promise = MenuSearchService.getMatchedMenuItems(searchTerm);
 
-      // console.log(promise);
       return promise.then(function(result) {
-        // console.log(result);
         ctrl.found = result;
         ctrl.showMsg = true;
         return result;

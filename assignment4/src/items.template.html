@@ -1,0 +1,19 @@
+<h2>{{ itemList.categoryName }} menu</h2>
+<ul>
+  <li ng-repeat="item in itemList.items"
+      ng-click="itemList.setActiveItem(item.short_name)">
+      <!-- ui-sref="items.item-detail({itemShortName:item.short_name})" -->
+    <span class="menu_item">{{ item.name }} - {{ item.short_name}}</span>
+    <!-- <div ng-show="item.short_name===itemList.activeItem"> -->
+    <div class="item_detail">
+      <span ng-if="item.description">{{ item.description }}<br></span>
+      <span ng-if="item.small_price">
+        Large {{ item.price_large | currency }} -
+        Small {{ item.price_small | currency }}
+      </span>
+      <span ng-if="!item.small_price">
+        {{ item.price_large | currency }}
+      </span>
+    </div>
+  </li>
+</ul>

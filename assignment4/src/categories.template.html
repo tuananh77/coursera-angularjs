@@ -1,0 +1,8 @@
+<h2 class="instruction">Please choose a category</h2>
+<ul>
+  <li class="menu_item"
+      ng-repeat="cat in catList.categories"
+      ui-sref="items({categoryShortName:cat.short_name })">
+    {{ cat.name }}
+  </li>
+</ul>

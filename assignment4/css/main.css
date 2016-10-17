@@ -1,0 +1,31 @@
+body {
+  font-size: 16px;
+  color: #000;
+  font-family: 'Oxygen', sans-serif;
+}
+
+.headline {
+  color: #ff540a;
+}
+
+.instruction {
+  color: #19bedb;
+}
+
+.menu_item {
+  color: #0e4780;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+li.menu_item:hover {
+  color: #ff540a;
+  cursor: pointer;
+}
+
+.item_detail {
+  color: #d49a2e;
+  padding-left: 10px;
+  font-style: italic;
+  padding-bottom: 15px;
+}

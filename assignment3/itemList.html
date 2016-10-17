@@ -1,11 +1,11 @@
 <div>
   <div ng-if="list.showMsg">
-    <h3 class="msgfound" ng-if="list.found.length>0">&nbsp;&nbsp;
+    <h3 class="msgfound" ng-if="list.matched.length>0">&nbsp;&nbsp;
       Found {{::list.found.length}} items</h3>
-    <h3 class="msgnotfound" ng-if="list.found.length===0">&nbsp;&nbsp;
+    <h3 class="msgnotfound" ng-if="list.matched.length===0">&nbsp;&nbsp;
       Nothing found!</h3>
   </div>
-  <div class="row" ng-repeat="item in list.found">
+  <div class="row" ng-repeat="item in list.matched">
     <div class="col-sm-3">{{$index+1}}. {{::item.name}}</div>
     <div class="col-sm-1">{{::item.short_name}}</div>
     <div class="col-sm-5">{{::item.description}}</div>
