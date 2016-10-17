@@ -7,7 +7,7 @@ angular.module("MenuApp")
   templateUrl: "src/items.list.html",
   restrict: "AE",
   bindings: {
-    catList: "<"
+    items: "<"
   }
 });
 

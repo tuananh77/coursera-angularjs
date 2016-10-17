@@ -1,10 +1,9 @@
-<a ui-sref="home">Home</a> < <a ui-sref="categories">Categories</a>
-<h2>{{ itemList.categoryName }} menu</h2>
-<menu-items items="itemList.items"></menu-items>
-<!-- <ul>
-  <li ng-repeat="item in itemList.items"
+<ul>
+  <li ng-repeat="item in $ctrl.items"
       ng-click="itemList.setActiveItem(item.short_name)">
+      <!-- ui-sref="items.item-detail({itemShortName:item.short_name})" -->
     <span class="menu_item">{{ item.name }} - {{ item.short_name}}</span>
+    <!-- <div ng-show="item.short_name===itemList.activeItem"> -->
     <div class="item_detail">
       <span ng-if="item.description">{{ item.description }}<br></span>
       <span ng-if="item.small_price">
@@ -16,4 +15,4 @@
       </span>
     </div>
   </li>
-</ul> -->
+</ul>
