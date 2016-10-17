@@ -6,11 +6,11 @@
     <!-- <div ng-show="item.short_name===itemList.activeItem"> -->
     <div class="item_detail">
       <span ng-if="item.description">{{ item.description }}<br></span>
-      <span ng-if="item.small_price">
+      <span ng-if="item.price_small">
         Large {{ item.price_large | currency }} -
         Small {{ item.price_small | currency }}
       </span>
-      <span ng-if="!item.small_price">
+      <span ng-if="!item.price_small">
         {{ item.price_large | currency }}
       </span>
     </div>
