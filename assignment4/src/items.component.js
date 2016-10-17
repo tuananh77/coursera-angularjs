@@ -3,8 +3,8 @@
 
 angular.module("MenuApp")
 
-.component("categories", {
-  templateUrl: "src/categories.list.html",
+.component("menuItems", {
+  templateUrl: "src/items.list.html",
   restrict: "AE",
   bindings: {
     catList: "<"

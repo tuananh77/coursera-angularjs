@@ -1,0 +1,7 @@
+<ul>
+  <li class="menu_item"
+      ng-repeat="cat in $ctrl.catList"
+      ui-sref="items({categoryShortName:cat.short_name })">
+    {{ cat.name }}
+  </li>
+</ul>
